@@ -1080,7 +1080,12 @@ this approach.
    An optional attribute, :attr:`!__file__` indicates the pathname of the file
    from which the module was loaded (if loaded from a file), or the pathname of
    the shared library file for extension modules loaded dynamically from a
-   shared library. It might be missing for certain types of modules, such as C
+   shared library.
+   
+   The value of :attr:`!__file__` may be an absolute or relative path,
+   depending on how the module was loaded and how Python was invoked.
+   
+   It might be missing for certain types of modules, such as C
    modules that are statically linked into the interpreter, and the
    :ref:`import system <importsystem>` may opt to leave it unset if it
    has no semantic meaning (for example, a module loaded from a database).
